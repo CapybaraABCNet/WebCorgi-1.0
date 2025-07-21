@@ -1,0 +1,150 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #00f2ff;
+}
+
+header {
+    background: #12c8ff;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #00f2ff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid  #00f2ff;
+    padding-left: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00f2ff;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00f2ff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1a1a1a;
+}
+.m {
+    color:#007b33;
+    border-radius: 15px; /* Сглаженные углы */
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: appear 2s forwards;
+    margin-bottom: 20px; /* Отступ снизу */
+    
+}
+.w {
+    color:rgb(255, 255, 255);
+    border-radius: 15px; /* Сглаженные углы */
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: appear 2s forwards;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+@keyframes appear {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        img {
+            width: 500px; /* Ширина изображения */
+            border-radius: 15px; /* Сглаженные углы для изображения */
+            opacity: 0;
+            animation: imageFadeIn 2s forwards;
+            display: block; /* Отображение изображения как блочного элемента */
+            margin: 20px auto; /* Центрирование изображения */
+        }
+
+        @keyframes imageFadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .content-container {
+    background-color: #f9f9f9; /* Светлый фон */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    padding: 20px; /* Внутренние отступы */
+    margin: 20px auto; /* Отступы сверху и снизу, центрирование */
+    max-width: 800px; /* Максимальная ширина */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.content-container h2 {
+    font-size: 2em; /* Размер заголовка */
+    color: #007b33; /* Цвет заголовка */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.content-container p {
+    font-size: 1.2em; /* Размер текста */
+    color: #333; /* Цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.cta-button {
+    background-color: #007b33; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    font-size: 1em; /* Размер текста кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.cta-button:hover {
+    background-color: #005f26; /* Цвет кнопки при наведении */
+}

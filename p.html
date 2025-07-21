@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1 class="w">WebCorgi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="w">Главная страница</a></li>
+                <li><a href="corgi.html" class="w">Корги</a></li>
+                <li><a href="p.html" class="w">Интересные штуки</a></li>
+                <li><a href="abc.html" class="w">О создателе</a></li>
+            </ul>
+        </nav>
+        <img src="https://superpet.ru/wp-content/uploads/2021/10/%D0%9A%D0%90%D0%A0%D0%94%D0%98%D0%93%D0%90%D0%9D-2-1024x670.jpg" alt="Корги">
+    </header>
+
+    <h1 class="m">Случайное изображение</h1>
+    <img id="randomImage" src="" alt="Случайное изображение" style="max-width: 500px; max-height: 500px;">
+    <button type="button" class="btn btn-info" id="newImageButton">Показать другое изображение</button>
+
+    <h2 class="m">Камень, Ножницы и Бумага</h2>
+    <div class="choices">
+        <button id="toy">Игрушка</button>
+        <button id="k">Косточка</button>
+        <button id="oh">Ошейник</button>
+    </div>
+    <div class="result">
+        <h2 id="resultText"></h2>
+    </div>
+
+    <script>
+        const choices = ["Игрушка", "Косточка", "Ошейник"]; // Исправлено на choices
+        const resultText = document.getElementById('resultText');
+
+        document.getElementById('toy').addEventListener('click', () => playGame('Игрушка'));
+        document.getElementById('k').addEventListener('click', () => playGame('Косточка'));
+        document.getElementById('oh').addEventListener('click', () => playGame('Ошейник'));
+
+        function playGame(playerChoice) {
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let result;
+
+            if (playerChoice === computerChoice) {
+                result = "Ничья";
+            } else if (
+                (playerChoice === "Косточка" && computerChoice === "Игрушка") ||
+                (playerChoice === "Игрушка" && computerChoice === "Ошейник") ||
+                (playerChoice === "Ошейник" && computerChoice === "Косточка")
+            ) {
+                result = "Вы выиграли!";
+            } else {
+                result = "Вы проиграли!";
+            }
+
+            resultText.textContent = "Вы выбрали: " + playerChoice + ", Компьютер выбрал: " + computerChoice + ". " + result;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
